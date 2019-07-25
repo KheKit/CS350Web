@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--Project for CS 350 HTML and CSS-->
+<html lang = "en">
+
+	<head>
+	
+
+	<meta charset = "utf-8">
+	<meta name = "author" content = "Khe Kit Shum (Keith)">
+	<meta name = "description" content = "CS350 Project 1 Warm up">
+	<meta name = "description" content = "CS350 Project 2 add on">
+	<meta name = "description" content = "CS350 Project 3 add on">
+
+	<link rel = "stylesheet" type = "text/css" href = "Project1CSS.css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Mogra' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Croissant One' rel='stylesheet'>
+
+	<title>CS350 HomePage</title>
+	
+	<script src="Project3JS.js"></script>
+
+	</head>
+	
+		<body>
+		
+			<ul class="topbar">
+				<li class="homepage"><a class="active" href="index.html">HomePage</a></li>
+				<li class="resume"><a class="active" href="resume.html">Resume</a></li>
+				<li class="about"><a class="active" href="aboutMe.html">About Me</a></li>
+			</ul>
+			
+			<header>
+				<div class="container">
+					<img src="2043687.jpg" alt="top-banner" class="top-banner">
+					<div class="top-right">CS 350</div>
+					<h1 class="centered">Khe Kit Shum (Keith)</h1>
+				</div>
+			</header>
+			
+			<table class="first-table">
+				<tbody>
+					<tr>
+						<td rowspan="3" class="first-column"><img src="101.jpg" alt="left-banner" class="left-banner"></td>
+						<td class="profile-column"></td>
+						<td colspan="3" class="bio">
+							<div class="bio">
+								<h3>Biography</h3>
+								<hr>
+								<p>
+								I am a transfer student from Malaysia<br/>
+								Currently studying in<br/>
+								Southern Illinois University Carbondale (SIUC)<br/>
+								Major in Computer Science<br/>
+								Interested in Artificial Intelligence<br/>
+								Like to explore new places and try new things<br/>
+								
+								Love dogs<br/>
+								</p>
+							</div>
+						</td>
+						<td rowspan="3" class="last-column"><img src="102.jpg" alt="right-banner" class="right-banner"></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2" class="quote">
+							<h3 id="first">Favourite Quote</h3>
+							<blockquote cite="https://www.goodreads.com/quotes/7809405-evil-is-evil-lesser-greater-middling-makes-no-difference-the" >
+							<pre><span class="inner-pre">
+								Evil is Evil. Lesser, greater, middling… 
+							Makes no difference. The degree is arbitary. 
+						The definition’s blurred. If I’m to choose between one evil and another… 
+								I’d rather not choose at all.
+							
+							<strong>Andrzej Sapkowski</strong>, The Last Wish
+							</span></pre>
+							</blockquote>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+				
+			<table class="timetable">
+				<caption class="caption2">My Schedule</caption>
+				
+				<tr>
+					<td>Days</td>
+					<td rowspan="2">Monday</td>
+					<td rowspan="2">Tuesday</td>
+					<td rowspan="2">Wednesday</td>
+					<td rowspan="2">Thursday</td>
+					<td rowspan="2">Friday</td>
+					<td rowspan="2">Saturday</td>
+					<td rowspan="2">Sunday</td>
+				</tr>
+				<tr>
+					<td>Time</td>
+				</tr>
+				
+				<tr>
+					<td>Morning</td>
+					<td class="mon">BIOL 202 Class</td>
+					<td class="tue">Prepare Ingredients</td>
+					<td class="wed">BIOL 202 Class</td>
+					<td class="thu">Chores</td>
+					<td class="fri">BIOL 202 Class</td>
+					<td class="sat">Groceries Shopping</td>
+					<td class="sun">Laundry</td>
+				</tr>
+				
+				<tr>
+					<td>Afternoon</td>
+					<td class="mon">Work</td>
+					<td class="tue">Work</td>
+					<td class="wed">Work</td>
+					<td class="thu">Work</td>
+					<td class="fri">Work</td>
+					<td class="sat">Play Games</td>
+					<td class="sun">Cycling</td>
+				</tr>
+				
+				<tr>
+					<td>Evening</td>
+					<td class="mon">Gym Workout</td>
+					<td class="tue">Gym Workout</td>
+					<td class="wed">Gym Workout</td>
+					<td class="thu">Nap</td>
+					<td class="fri">Gym Workout</td>
+					<td class="sat">Gym Workout</td>
+					<td class="sun">Watch Movie</td>
+				</tr>
+				
+				<tr>
+					<td>Night</td>
+					<td class="mon">CS 350 Meeting</td>
+					<td colspan="6">Leisure</td>
+				</tr>					
+			</table>
+				
+			<h2 class="inquiries">For Inquiries</h2>
+			<h2 class="inquiries">Leave your information</h2>
+			
+			<form>
+				<fieldset>
+					<legend class="inquiries">Your Info</legend>
+						<p>Name: <input type="text" name="name" pattern="[A-Za-z]{2,}" title="Only Alphabet" placeholder="Enter your name here" required></p>
+						<p>Age: <input type="text" name="age" pattern="[0-9]{2}" title="Only Number" maxlength="2" placeholder="Enter your valid SIU" required></p>
+						<p>Email: <input type="text" name="email" pattern="[A-Za-z0-9._+-]+@[a-z]+\.[a-z]{2,4}$" title="Example:khekit@hotmail.com" placeholder="Enter valid email address" required></p>
+						<p>Tel: <input type="text" name="telnum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format XXX-XXX-XXXX" maxlength="12" placeholder="Your cell number" required></p>
+						<p>Comment: </p><textarea name="comment" rows="5" cols="40">Your text here</textarea>
+						<p><input type="submit" name="send" value="Submit" onclick="display()" ><input type="reset" name="cancel" value="Cancel"></p>
+				</fieldset>
+			</form>
+			
+			<p id="text"></p>
+			
+			<button onclick="alertMessage()" class="testing">Testing alert</button>
+			
+			<table>
+				<tr>
+					<td><h2 class="miniGame">Mini Game</h2></td>
+				</tr>
+				<tr>
+					<td><button onclick="startGame()">Play it</button></td>
+				</tr>
+			</table>	
+			
+			<h3 id="text2"></h3>
+			
+			<canvas id="myCanvas"></canvas>
+			
+			<button onclick="clearCanvas()" class="testing">Reset</button>
+			
+			<h3 id="message"></h3>
+			
+			<hr>
+			
+			<footer>
+				Contact Me <br/>
+				Email <address>khekit@hotmail.com</address>
+				
+				<h4>Social Media</h4>
+				<nav>
+					<a href ="https://www.facebook.com/keith.shum.18" target="_blank"><img src = "facebook.png" alt="Facebook" class="socialpic"></a>
+					<a href ="https://twitter.com/KheKit" target="_blank"><img src = "twitter.png" alt="Twitter" class="socialpic"></a>
+					<a href ="https://github.com/KheKit" target="_blank"><img src = "github.png" alt="GitHub" class="socialpic"></a>
+				</nav>
+			</footer>
+			
+		</body>
+</html>
+
+ 

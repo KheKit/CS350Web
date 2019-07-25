@@ -1,0 +1,348 @@
+body {
+	background-color: #6D81BD;
+	margin: 0px;
+	}
+	
+ul.topbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color:#F9F9E2;
+  font-size: 30pt;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: black;
+	text-align:center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+	
+li.homepage a:hover {
+	background-color:#e0dd18;
+	color: black;
+}
+
+li.homepage a:active {
+	background-color:#e0dd18;
+}
+
+li.resume a:hover {
+	background-color:#e0dd18;
+	color: black;
+}
+
+li.resume a:active {
+	background-color:#e0dd18;
+}
+
+li.about a:hover {
+	background-color:#e0dd18;
+	color: black;
+}
+
+li.about a:active {
+	background-color:#e0dd18;
+}
+
+.pdf {
+	background-color: #3D2A59;
+	color: white;
+}
+
+p.linkpdf a:link {
+	color: #9BEEFF;
+}
+
+p.linkpdf a:visited {
+	color: hotpink;
+}
+
+.container {
+	position: relative;
+	text-align: center;
+}
+
+img.top-banner {
+	max-width: 100%;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+h1.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Mogra';
+}
+
+table.first-table {
+	margin: 0px;
+	width: 100%;
+}
+
+td.first-column {
+	background-color: #F7F6E6;
+	width: 200px;
+}
+
+img.left-banner {
+	max-height: 1500px;
+	max-width: 220px;
+}
+
+td.profile-column {
+	background-image: url("KK_HongKong1.jpg");
+	height: 490px;
+	width:380px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+img.profile-picture {
+	border-radius: 20%;
+	display: block;
+	max-width: 450px;
+	max-height: 530px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td.bio {
+	background-color: #E0DD55;
+	width: 400px;
+	padding: 0px;
+}
+
+.bio {
+	margin-left: 20px;
+	font-family: 'Mogra';
+	font-size: 16px;
+	width: 400px;
+}
+
+td.quote {
+	background-image: url("quote.jpg");
+	background-repeat: no-repeat;
+	width: 600px;
+}
+
+td.last-column {
+	background-color: #F7F6E6;
+	width: 200px;
+}
+
+img.right-banner {
+	max-height: 1500px;
+	max-width: 220px;
+}
+
+#first {
+	margin-left: 50px;
+}
+
+span.inner-pre {
+	margin: 0px;
+	font-family: 'Croissant One';
+	font-size:16px;
+	width: 400px;
+}
+
+table.second-table {
+	background-color: #B9DEF5;
+	width: 100%;
+}
+
+caption.caption {
+	padding: 30px;
+	background-color: #87DEF6;
+	font-family: 'Mogra';
+	font-size: 26px;
+}
+
+td.pic-column {
+	width: 25%;
+}
+
+nav.picture {
+	margin:10px;
+	border: none;
+	width: 180px;
+}
+
+img.onsite {
+	width:300px;
+	height:auto;
+	padding:20px;
+	line-height: 20pt;
+}
+
+div.desc {
+	font-family: 'Mogra';
+	text-align: center;
+}
+
+caption.caption2 {
+	padding: 30px;
+	background-color: #87DEF6;
+	font-family: 'Mogra';
+	font-size: 26px;
+}
+
+table.timetable {
+	background-image: url("rainbow.jpg");
+	width: 100%;
+	padding: 30px;
+	text-align: center;
+}
+
+td {
+	padding: 15px;
+}
+
+td.mon {
+	background-color: #FF0000;
+}
+
+td.tue {
+	background-color: #FF7F00;
+}
+
+td.wed {
+	background-color: #FFFF00;
+}
+
+td.thu {
+	background-color: #00FF00;
+}
+
+td.fri {
+	background-color: #0000FF;
+}
+
+td.sat {
+	color: white;
+	background-color: #4B0082;
+}
+
+td.sun {
+	color: white;
+	background-color: #8B00FF;
+}
+
+caption.caption3 {
+	padding: 30px;
+	background-color: #87DEF6;
+	font-family: 'Mogra';
+	font-size: 26px;
+}
+
+img.albumcover {
+	width: 470px;
+	height: 470px;
+}
+
+td.one {
+	background-color: #7CA7E7;
+}
+
+td.two {
+	background-color: #E76D72;
+}
+
+td.three {
+	background-color: #268584;
+}
+
+h2.video1 {
+	background-color: #87DEF6;
+	margin-left: 20px;
+	float: left;
+	font-family: 'Mogra';
+}
+
+iframe.video1 {
+	margin-left: 10px;
+	float: left;
+}
+
+h2.video2 {
+	background-color: #87DEF6;
+	font-family: 'Mogra';
+	text-align: center;
+}
+
+iframe.video2 {
+	margin-left: 200px;
+}
+
+h2.inquiries {
+	margin-left: 20px;
+	font-family: 'Mogra';
+}
+
+form {
+	margin-left: 20px;
+}
+
+label {
+		display:inline-block;
+		width:180px;
+		margin-right:20px;
+		text-align:left;
+		font-family: "Times New Roman", Times, serif;
+}
+
+input {
+		margin-left: 50px;
+}
+
+fieldset {
+		width:500px;
+		margin: 0px;
+}
+	
+footer {
+	float:left;
+}
+
+img.socialpic {
+	width:150px;
+	float: left;
+	margin:20px;
+}
+
+#text2 {
+	margin-left: 20px;
+}
+
+button.testing {
+	margin-left: 20px;
+}
+
+canvas {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 800px;
+	height: 500px;
+	border: 1px solid;
+	color: #d3d3d3;
+}
