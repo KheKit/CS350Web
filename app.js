@@ -31,7 +31,7 @@ app.get('/aboutMe.html', function(req, res) {
 	res.sendFile(path.join(__dirname + '/aboutMe.html'))
 });
 
-router.get('/', (req, res) => {
+/*router.get('/', (req, res) => {
 	res.render('index', {
 		title: 'Homepage'
 	});
@@ -47,9 +47,9 @@ router.get('/', (req, res) => {
 	res.render('aboutMe', {
 		title: 'About'
 	});
-});
+});*/
 
-module.exports = router;
+//module.exports = router;
 
 /*var pathname = url.parse(req.url).pathname;
 pathname = ( pathname === '/' || pathname === '') ? '/index.html' : pathname;
