@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var url = require('url');
+var events = require('events');
+var eventEmitter = new events.eventEmitter();
+var nodeemailer = reuqire('nodemailer');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -31,39 +34,28 @@ app.get('/aboutMe.html', function(req, res) {
 	res.sendFile(path.join(__dirname + '/aboutMe.html'))
 });
 
-/*router.get('/', (req, res) => {
-	res.render('index', {
-		title: 'Homepage'
-	});
+var transporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: 'khekit@gmail.com',
+		pass: 'notebook1998',
+	}
 });
 
-router.get('/', (req, res) => {
-	res.render('resume', {
-		title: 'Resume'
-	});
+var mailOptions = {
+	from: 'khekit@gmail.com',
+	to: feedbackEmail,
+	subject: 'Feedback',
+	text: 'Thank you for your feedback!'
+};
+
+transporter.sendMail(mailOptions, function(error, info) {
+	if (error) {
+		console.log(error);
+	} else {
+		console.log('Email send: ' + info.response);
+	}
 });
-
-router.get('/', (req, res) => {
-	res.render('aboutMe', {
-		title: 'About'
-	});
-});*/
-
-//module.exports = router;
-
-/*var pathname = url.parse(req.url).pathname;
-pathname = ( pathname === '/' || pathname === '') ? '/index.html' : pathname;
-
-fs.readFile(__dirname + pathname, function(err, data) {
-	if (err) {
-		console.log(err);
-	}
-	else
-	{
-
-
-	}
-});*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -96,4 +88,4 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(3000);
+app.listen(3000, () => console.log('Server started...'));
