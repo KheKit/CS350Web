@@ -169,8 +169,8 @@ function drawCanvas(){
 	
 }
 
-function sendEmail(event) {
+/*function sendEmail(event) {
 	event.preventDefault();
 	var form = document.getElementById("inquiry-form");
 	var name, age, email, tel, comments;
-}
+}*/

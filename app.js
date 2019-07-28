@@ -34,7 +34,7 @@ app.get('/aboutMe.html', function(req, res) {
 	res.sendFile(path.join(__dirname + '/aboutMe.html'))
 });
 
-var transporter = nodemailer.createTransport({
+/*var transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
 		user: 'khekit@gmail.com',
@@ -56,6 +56,7 @@ transporter.sendMail(mailOptions, function(error, info) {
 		console.log('Email send: ' + info.response);
 	}
 });
+*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
