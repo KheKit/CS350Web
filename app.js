@@ -4,13 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var url = require('url');
-var events = require('events');
-var eventEmitter = new events.eventEmitter();
-var nodeemailer = reuqire('nodemailer');
-
+//var events = require('events');
+//var eventEmitter = new events.eventEmitter();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var router = express.Router();
+//var router = express.Router();
 
 var app = express();
 
