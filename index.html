@@ -143,12 +143,12 @@
 			<form id="inquiry-form" method="post" onsubmit="sendEmail(event);">
 				<fieldset>
 					<legend class="inquiries">Your Info</legend>
-						<p>Name: <input type="text" id="name" pattern="[A-Za-z]{2,}" title="Only Alphabet" placeholder="Enter your name here (required)" required></p>
-						<p>Age: <input type="text" id="age" pattern="[0-9]{2}" title="Only Number" maxlength="2" placeholder="Enter your age )optional)"></p>
+						<p>Name: <input type="text" id="name" pattern="[A-Za-z]{2,}" title="Only Alphabet" placeholder="Your name" required></p>
+						<p>Age: <input type="text" id="age" pattern="[0-9]{2}" title="Only Number" maxlength="2" placeholder="Your age (Optional)"></p>
 						<p>Email: <input type="text" id="email" pattern="[A-Za-z0-9._+-]+@[a-z]+\.[a-z]{2,4}$" title="Example:khekit@hotmail.com" placeholder="Enter valid email address" required></p>
-						<p>Tel: <input type="text" name="telnum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format XXX-XXX-XXXX" maxlength="12" placeholder="Your cell number" required></p>
-						<p>Comment: </p><textarea name="comment" rows="5" cols="40">Your text here</textarea>
-						<p><input type="submit" id="send" value="Submit" onclick="display()" ><input type="reset" value="Cancel"></p>
+						<p>Tel: <input type="text" id="telnum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format XXX-XXX-XXXX" maxlength="12" placeholder="Your cell number" required></p>
+						<p>Comment: </p><textarea id="comment" rows="5" cols="40">Your text here</textarea>
+						<p><input type="submit" id="send" value="Submit" onclick="display()" ><input type="reset" name="clear" value="Clear"></p>
 				</fieldset>
 			</form>
 			
