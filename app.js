@@ -32,7 +32,7 @@ app.get('/aboutMe.html', function(req, res) {
 	res.sendFile(path.join(__dirname + '/aboutMe.html'))
 });
 
-/*var transporter = nodemailer.createTransport({
+var transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
 		user: 'khekit@gmail.com',
@@ -42,19 +42,19 @@ app.get('/aboutMe.html', function(req, res) {
 
 var mailOptions = {
 	from: 'khekit@gmail.com',
-	to: feedbackEmail,
+	to: 'khekit98@yahoo.com',
 	subject: 'Feedback',
 	text: 'Thank you for your feedback!'
 };
 
-transporter.sendMail(mailOptions, function(error, info) {
+function send(transporter.sendMail(mailOptions, function(error, info) {
 	if (error) {
 		console.log(error);
 	} else {
 		console.log('Email send: ' + info.response);
 	}
 });
-*/
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
