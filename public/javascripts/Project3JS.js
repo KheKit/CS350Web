@@ -1,10 +1,10 @@
-function display() {
+/*function display() {
 	document.getElementById("text").innerHTML 
 		= "Thank you…. a confirmation email message will be sent to you soon.";
-}
+}*/
 		
 function alertMessage() {
-	alert("This is working");
+	alert("Thank you…. a confirmation email message will be sent to you soon.");
 }
 
 console.log('canvas');
