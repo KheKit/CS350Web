@@ -3,9 +3,9 @@
 		= "Thank you…. a confirmation email message will be sent to you soon.";
 }*/
 		
-function alertMessage() {
+/*function alertMessage() {
 	alert("Thank you…. a confirmation email message will be sent to you soon.");
-}
+}*/
 
 console.log('canvas');
 
