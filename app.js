@@ -96,6 +96,7 @@ module.exports = app;
 app.listen(3000, () => console.log('Server started...'));
 
 // This is the only POST route that needed in this project
+/*
 app.post('/views/Feedback/index.htm', function (req, res) {
   var body = '';
   var testValidity = false; // never trust the client side
@@ -129,32 +130,35 @@ app.post('/views/Feedback/index.htm', function (req, res) {
     }
   });
 });
+*/
 
 // This handles all GET requests
-app.get('*', function (req, res) {
   /* 
     This block merely skips over the call for the 
     favicon, as I'm not dealing with it yet.
   */
+  /*
   if (req.url === '/favicon.ico') {
     res.writeHead(200, {'Content-Type': 'image/x-icon'} );
     return res.end();
   }
+  */
   /* 
     `url.parse(urlString)` returns a URL object
     `url.pathname` Gets and sets the path portion of the URL.
   */
-  var pathname = url.parse(req.url).pathname;
+  //var pathname = url.parse(req.url).pathname;
   // Sets up a default route to go directly to the "front page"
-  pathname = ( pathname === '/' || pathname === '' ) ? '/index.htm' : pathname;
+  //pathname = ( pathname === '/' || pathname === '' ) ? '/index.htm' : pathname;
 
   /*
     `path.extname()` returns the extension of the path, from the last occurrence of the . (period) character to end of string in the last portion of the path. If there is no . in the last portion of the path, or if there are no . characters other than the first character of the basename of path (see path.basename()) , an empty string is returned.
   */
-  var ext = path.extname(pathname);
+  //var ext = path.extname(pathname);
   /*
     "fs.readFile(path, callback)" asynchronously reads the entire contents of a file.
   */
+  /*
   fs.readFile(__dirname + pathname, function(err, data){
     // Handle any type of error first
 	// __dirname gives you the path of the currently running file
@@ -179,18 +183,22 @@ app.get('*', function (req, res) {
     return res.end();
   });
 });
+*/
 
 
 // Function merely converts data from an object to a string.
+/*
 function convertToString(dirty, ts) {
   dirty.id = uuidv1();
   dirty.created_at = Date();
   dirty.reference_id = ts;
   return JSON.stringify(dirty);
 } // end convertToString
+*/
 
 
 // Function is used to send confirmation email.
+/*
 function sendEmail(email, reference) {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -207,6 +215,8 @@ function sendEmail(email, reference) {
     subject: 'Confirmation email',
     text: "Your information has been received.\nThank you, again, for your feedback.\nYour reference number for further emails is " + reference + "."
   };
+*/
+
 
   // This block is used to test the mailing server
   /*
@@ -221,6 +231,7 @@ function sendEmail(email, reference) {
   */
 
   // Send the email and log the results
+  /*
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
       console.log(error);
@@ -228,4 +239,5 @@ function sendEmail(email, reference) {
       console.log('Email sent: ' + info.response);
     }
   });
-} // end sendEmail
+} */
+// end sendEmail
