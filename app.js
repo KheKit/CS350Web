@@ -34,7 +34,7 @@ app.get('/aboutMe.html', function(req, res) {
 function alertMessage() {
 	alert("Thank you…. a confirmation email message will be sent to you soon.");
 
-	res.writeHead(HTTP-status-code, {'Content-Type': 'text/plain', Location: 'https://khekit-cs350.herokuapp.com'});
+	res.writeHead(HTTP-status-code, {'Content-Type': 'text/html', Location: 'https://khekit-cs350.herokuapp.com'});
 	res.end();
 
 	var transporter = nodemailer.createTransport({
