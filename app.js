@@ -34,6 +34,9 @@ app.get('/aboutMe.html', function(req, res) {
 function alertMessage() {
 	alert("Thank you…. a confirmation email message will be sent to you soon.");
 
+	res.writeHead(HTTP-status-code, {'Content-Type': 'text/plain', Location: __dirname + '/index.html'} );
+	res.end();
+
 	var transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
@@ -55,10 +58,6 @@ function alertMessage() {
 		} else {
 			console.log('Email send: ' + info.response);
 		}
-	});
-
-	app.get('/', function(req, res) {
-		res.sendFile(path.join(__dirname + '/index.html'))
 	});
 }
 
