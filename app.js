@@ -31,14 +31,19 @@ app.get('/aboutMe.html', function(req, res) {
 	res.sendFile(path.join(__dirname + '/aboutMe.html'))
 });
 
-function alertMessage() {
+app.post('/', function (req, res) {
 	alert("Thank you…. a confirmation email message will be sent to you soon.");
 
-	res.writeHead(HTTP-status-code, {'Content-Type': 'text/html', Location: 'https://khekit-cs350.herokuapp.com'});
-	res.end();
+	sendEmail();
 
+	res.writeHead(HTTP-status-code, {'Content-Type': 'text/plain', Location: '/'});
+	res.end();
+}
+
+function sendEmail(email, reference) {
 	var transporter = nodemailer.createTransport({
 		service: 'gmail',
+		host: 'smtp.gmail.com'
 		auth: {
 			user: 'khekit@gmail.com',
 			pass: 'notebook1998',
