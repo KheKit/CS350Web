@@ -43,7 +43,7 @@ app.post('/', function (req, res) {
 	res.end();
 });
 
-function sendEmail(email, reference) {
+function sendEmail() {
 	var transporter = nodemailer.createTransport({
 		service: 'gmail',
 		//host: 'smtp.gmail.com',
