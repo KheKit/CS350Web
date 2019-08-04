@@ -46,7 +46,7 @@ app.post('/', function (req, res) {
 function sendEmail(email, reference) {
 	var transporter = nodemailer.createTransport({
 		service: 'gmail',
-		host: 'smtp.gmail.com',
+		//host: 'smtp.gmail.com',
 		auth: {
 			user: 'khekit@gmail.com',
 			pass: 'notebook1998',
@@ -69,16 +69,16 @@ function sendEmail(email, reference) {
 	});
 }
 
-var url = "https://khekit-cs350.herokuapp.com";
+var myUrl = "https://khekit-cs350.herokuapp.com";
 var count = 0;
 
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(myUrl, function(err, db) {
   if (err) throw err;
   console.log("Database created!");
   db.close();
 });
 
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(myUrl, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mydb");
   dbo.createCollection("visitors", function(err, res) {
@@ -88,7 +88,7 @@ MongoClient.connect(url, function(err, db) {
   });
 });
 
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(myUrl, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mydb");
   var myobj = { name: "KheKit", email: "khekit@hotmail.com" };
