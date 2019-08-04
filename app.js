@@ -41,7 +41,7 @@ app.post('/', function (req, res) {
 
 	res.writeHead(HTTP-status-code, {'Content-Type': 'text/plain', Location: '/'});
 	res.end();
-}
+});
 
 function sendEmail(email, reference) {
 	var transporter = nodemailer.createTransport({
