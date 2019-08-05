@@ -69,10 +69,10 @@ function sendEmail() {
 	});
 }
 
-var myUrl = "https://khekit-cs350.herokuapp.com";
-var count = 0;
+//var myUrl = "https://khekit-cs350.herokuapp.com";
+//var count = 0;
 
-MongoClient.connect(myUrl, function(err, db) {
+/*MongoClient.connect(myUrl, function(err, db) {
   if (err) throw err;
   console.log("Database created!");
   db.close();
@@ -98,6 +98,7 @@ MongoClient.connect(myUrl, function(err, db) {
     db.close();
   });
 });
+*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
